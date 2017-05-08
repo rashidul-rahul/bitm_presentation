@@ -11,20 +11,20 @@ $stmt = $db->query($query);
 $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 //$query = "SELECT * FROM `students` ORDER BY id DESC LIMIT 0,5";
-$query = "SELECT * FROM `courses`";
+$query = "SELECT * FROM `courses` ORDER BY `name`";
 //execution
 $stmt = $db->query($query);
 $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 //assign course
-if(strtolower($_SERVER['REQUEST_METHOD'])=='post') {
-    $student_id = $_POST['student_id'];
-    $course_ids = $_POST['course_ids'];
-    foreach ($course_ids as $course_id) {
-        $query  = "INSERT INTO `map_course_students` ( `student_id`, `course_id`) VALUES ('".$student_id."', '".$course_id."')";
-        $db->exec($query);
-    }
-}
+//if(strtolower($_SERVER['REQUEST_METHOD'])=='post') {
+//    $student_id = $_POST['student_id'];
+//    $course_ids = $_POST['course_ids'];
+//    foreach ($course_ids as $course_id) {
+//        $query  = "INSERT INTO `map_course_students` ( `student_id`, `course_id`) VALUES ('".$student_id."', '".$course_id."')";
+//        $db->exec($query);
+//    }
+//}
 
 ?>
 
@@ -84,7 +84,7 @@ if(strtolower($_SERVER['REQUEST_METHOD'])=='post') {
         <div class="row content">
             <div class="col-md-10">
                 <h1>Assign courses</h1>
-                <form method="post">
+                <form method="post" action="adminpanel/students/assign.php">
                     <div class="form-group">
                         <label for="studet_id">Select Student</label>
                         <select id="studet_id" name = "student_id" class="form-control">

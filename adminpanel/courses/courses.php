@@ -79,7 +79,7 @@ $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <td><?=$course['name']?></td>
                             <td><?=$course['course_code']?></td>
                             <td><a href="adminpanel/courses/show.php?id=<?=$course['id']?>">Show</a> |
-                                <a href="adminpanel/courses/edit.php">Edit</a> | <a
+                                <a href="adminpanel/courses/edit.php?id=<?=$course['id']?>">Edit</a> | <a
                                         href="adminpanel/courses/delete.php?id=<?=$course['id']?>">Delete</a></td>
                         </tr>
                         <?php
