@@ -1,0 +1,39 @@
+.mainContent{
+    
+}
+.bg1{
+    background-image: url("../images/chalkboard.jpg");
+}
+.bg2{
+    background-image: url("../images/header-end.jpeg");
+    min-height: 53px;
+}
+.head-image{
+    float: right;
+    margin-top: -200px;
+}
+.heading{
+    margin: 0 auto;
+}
+.heading h1{
+    margin: 0px 0px 0px 85px;
+    padding-top: 70px;
+    font-size: 58px;
+    color: darkred;
+}
+.heading h4{
+    margin: 26px 0px 0px 397px;
+    font-size: 48px;
+    color: #685036;
+}
+.margintop{
+    margin-top: 5px;
+}
+.content{
+    margin-top: 30px;
+}
+
+footer{
+   text-align: center;
+    margin-top: 20px;
+}
