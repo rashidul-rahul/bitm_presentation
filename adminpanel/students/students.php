@@ -89,7 +89,8 @@ $student_id_course_name = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 }
                             }
                         ?></td>
-                    <td><a href="adminpanel/students/show.php?<?="id=".$student['id']?>">Show</a> | <a href="adminpanel/students/edit.php">Edit</a> | <a href="adminpanel/students/delete.php">Delete</a> | <a href="adminpanel/students/editcourse.php">Edit Course</a></td>
+                    <td><a href="adminpanel/students/show.php?<?="id=".$student['id']?>">Show</a> | <a href="adminpanel/students/edit.php">Edit</a> | <a href="http://localhost/kid_school/adminpanel/students/delete.php?id=<?=$student['id']?>">Delete</a> |\
+                        <a href="adminpanel/students/editcourse.php?id=<?=$student['id']?>">Edit Course</a></td>
                 </tr>
                 <?php
                     }
